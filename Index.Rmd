@@ -62,7 +62,7 @@ knitr::include_graphics('images/Sentinel-1_pillars.jpg')
 
 * Radar mapping of Earth
 
-* Bi-weekly coverage of world's land masses, as well as sea-ice zones, and Europe's coastal zones and shipping routes (daily)
+* Bi-weekly coverage of world's land masses, as well as sea-ice zones and Europe's coastal zones and shipping routes (daily)
 
   
 
