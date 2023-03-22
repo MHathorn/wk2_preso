@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Sentinel 1</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Mike Hathorn" />
+    <script src="libs/header-attrs-2.20/header-attrs.js"></script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Sentinel 1
+]
+.author[
+### Mike Hathorn
+]
+.institute[
+### CASA, UCL
+]
+.date[
+### 2023/01/31 (updated: 2023-03-22)
+]
+
+---
+
+
+
+
+
+
+
+
+
+# Summary: Sentinel 1
+
+.pull-left[* Two polar-orbiting satellites
+* The only Sentinel mission to provide Synthetic Aperture Radar (SAR) imagery
+* Allows for day and night imagery regardless of weather
+* Focus (land) &lt;a name=cite-esaLandMonitoringSentinel12022&gt;&lt;/a&gt;([ESA, 2022](#bib-esaLandMonitoringSentinel12022))`: 
+  * Forest management
+  * Agriculture monitoring
+  * Urban deformation mapping
+* Also used in marine monitoring and emergency management]
+
+&lt;div class="figure" style="text-align: right"&gt;
+&lt;img src="images/Sentinel-1_pillars.jpg" alt="Sentinel 1P (Source: European Space Agency, 2022)" width="50%" /&gt;
+&lt;p class="caption"&gt;Sentinel 1P (Source: European Space Agency, 2022)&lt;/p&gt;
+&lt;/div&gt;
+---
+
+# Summary 2: Mission Purpose
+
+* Radar mapping of Earth
+
+* Bi-weekly coverage of world's land masses, as well as sea-ice zones, and Europe's coastal zones and shipping routes (daily)
+
+  
+
+  
+
+
+---
+
+# Summary 3: SAR
+
+* Carries a single C-band SAR instrument
+* This allows the satellite to "see through clouds"
+
+## Key attributes:
+
+| **Resolution** |                                               |
+| -------------- | --------------------------------------------- |
+| Spatial        | As low as 5x5m, 400km swath                   |
+| Temporal       | 6 days at equator, 3 days at higher latitudes |
+| Radiometric    | 1 dB                                          |
+
+---
+
+# Applications: Maritime monitoring
+
+## CHECK THIS SLIDE
+
+* Used to detect and track objects in the oceans (ships, icebergs)
+* Also used for detection of oil spills, which appear darker than water in SAR imagery 
+* Near real-time temporal resolution means that it can be used to track and persecute illegal oil spills
+* Also used for ice classification and iceberg data by coast guards, navies, and private shipping companies
+
+https://medium.com/geospatial-intelligence/using-sentinel-1-sar-data-for-imagery-intelligence-detection-of-vessels-df8e282ac2c0
+
+[[IMAGE HERE]]
+
+---
+
+# Applications: Land monitoring
+
+* Forestry: Forest type classification, biomass estimation, disturbance detection
+* Mapping of fire scars
+* Monitoring crop conditions, soil properties, assessing land use, soil degradation
+* Can be combined with optical data from other sources to improve the accuracy of informal settlement detection and mapping
+  * Needs to be ground-truthed in this context
+  * Spatial resolution not always high enough
+  * Speckle an issue
+
+https://sentinel.esa.int/web/sentinel/user-guides/sentinel-1-sar/applications/land-monitoring
+
+https://www.mdpi.com/2073-445X/12/1/99
+
+https://www.sciencedirect.com/science/article/pii/S0924271621001635
+
+
+---
+
+# Applications: Emergency management
+
+* Phase data can be used for interferometric (InSAR) analysis - used for measuring surface deformations caused by seismic events and volcanic activities
+* Also used to assess damage after other natural disasters
+* High spatial and temporal resolution combined with all-weather imagery is a huge advantage here
+
+
+
+---
+
+# Reflections: Strengths
+
+---
+
+# Reflections: Limitations
+
+Wind?
+
+---
+
+# Reflections: Why I chose this
+
+---
+# References
+
+---
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
